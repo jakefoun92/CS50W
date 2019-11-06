@@ -1,0 +1,27 @@
+<header>
+<link rel="stylesheet" type="text/css" href="multi.css">
+<title>Canvas</title>
+</header>
+
+<body style= "background-image: url(resources/891bec9a2e548a6afaaf34be83478d5a-1000.jpg);">
+	<div class ="transbox">
+		<canvas id="myCanvas" style="border: 1px solid #fff; width: 200px; height: 100px">
+		Your browser does not support the HTML5 canvas tag.
+		</canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+
+			// Create gradient
+			var grd = ctx.createLinearGradient(0, 0, 200, 0);
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+
+			// Fill with gradient
+			ctx.fillStyle = grd;
+			ctx.fillRect(10, 10, 150, 80);
+		</script>
+
+		<br><a href="multimedia.html">Back to Multimedia</a>
+	</div>
+</body>

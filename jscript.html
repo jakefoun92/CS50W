@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		table, tr,th,td{
+			border: 2px solid yellow;
+			font-size: 20px;
+			padding: 10px;
+			width: 25%;
+			text-align: center;
+			color: yellow;
+		}
+		div.transbox {
+			background-color :#222222;
+			opacity: 0.8;
+			border : 1px ridge white;
+			border-radius : 22px;
+			float : left;
+			margin : 1% 1% 1% 4%;
+			padding : 1%;
+			width : 90%;
+		}
+		a:link{
+			color: #18b1ee;
+		}
+		a:visited{
+			color: pink;
+		}
+	</style>
+
+	<title>JScript Page</title>
+</head>
+
+<body style="background-image: url(resources/891bec9a2e548a6afaaf34be83478d5a-1000.jpg); font-size: 25px; color: yellow;">
+	
+	<div class="transbox">
+		<p> Today is: </p>
+		<p id="currentDate">
+		</p><br>
+		
+		<p>This is the due date:</p>
+		<p id="due"></p>
+		
+		<p id= "message" style="font-size: 25px; font-weight: bold;"></p>
+		
+		<div id="tbl"> </div><br><br>
+
+		<a href="index.html">Home Page</a>
+	</div>
+</body>
+	<script>
+		var today = new Date();
+		var diff = 0;
+		var days = 1000*60*60*24;
+
+		document.getElementById("currentDate").innerHTML = today.toDateString();
+
+		var dueDate = new Date(2018,10,19);
+		document.getElementById("due").innerHTML = dueDate.toDateString();
+		
+		if (today < dueDate){
+			diff = dueDate.getTime() - today.getTime();
+			document.getElementById("message").innerHTML = Math.trunc(diff/days) + " day(s) left until the due date.";
+		}
+		else{
+			diff = dueDate - today;
+			document.getElementById("message").innerHTML = Math.trunc(diff/days) * -1 + " day(s) have passed since the due date.";
+		}
+		
+		var table = '<table>';
+		var rows = 13;
+		var col = 3;
+
+		var monthNum = [1,2,3,4,5,6,7,8,9,10,11,12];
+		var monthName = ["January","February","March","April","May","June","July","August",
+						"September","October","November","December"];
+		var monthDays = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+		for(var r = 0; r < rows; r++){
+			if(r % 2 == 1){
+				table += '<tr>';
+			}
+			else{
+				table += '<tr style="background: #050505">'
+			}
+			for(var c = 0; c < col; c++){
+				if(r == 0){	
+					if(c == 0){
+						table += '<td>' + 'Month Number'  + '</td>';
+					}
+					else if(c == 1){
+						table += '<td>' + 'Month Name'  + '</td>';
+					}
+					else{
+						table += '<td>' + 'Days in Month'  + '</td>';
+					}
+				}
+				else{
+					if(c == 0){
+						table += '<td>' + monthNum[(r-1)] + '</td>';
+					}
+					else if(c == 1){
+						table += '<td>' + monthName[(r-1)] + '</td>';
+					}
+					else{
+						table += '<td>' + monthDays[(r-1)]  + '</td>';
+					}
+				}				
+			}
+			table += '</tr>';
+		}
+	table += '</table>';
+	tbl.innerHTML = table;
+	</script>
+</html>

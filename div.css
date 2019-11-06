@@ -1,0 +1,129 @@
+#headDiv,#footDiv{
+  background-color : #222222;
+  opacity: 0.8;
+  border: 1px ridge white;
+  border-radius : 22px;
+  clear : both;
+  margin : 1% 4% auto;
+  padding : 1%;
+  width : 90%;
+}
+
+.assignmentsDiv {
+  background-color : #222222;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  float : left;
+  margin : 1% 1% 1% 4%;
+  padding : 1%;
+  width : 90%;
+}
+
+.Div1 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : left;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div2 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : right;
+  float : right;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div3 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : left;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div4 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : right;
+  float : right;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div5 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : left;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div6 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : right;
+  float : right;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div7 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : left;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div8 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : right;
+  float : right;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
+  .Div9 {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : right;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    
+    <style>
+        div.transbox {
+            background-color :#222222;
+            opacity: 0.8;
+            border : 1px ridge white;
+            border-radius : 22px;
+            float : left;
+            margin : 1% 1% 1% 4%;
+            padding : 1%;
+            width : 90%;
+        }
+        p.time{
+            color: white;
+        }
+    </style>
+    <title>Form Page</title>
+</head>
+<body id = "back" style="background-color: black">
+    <div class="transbox">
+        <p class="time" id="time"></p>
+        <form id="emailForm" method="post" action="mailto:gerlanjr@buffalostate.edu?" novalidate onsubmit="return validateForm()">
+            <fieldset> 
+                <legend>Personal Information</legend> 
+                
+                <label for="firstName">First Name:</label> 
+                <input id="firstName" name="firstName" type="text" placeholder="Enter your first name"/><br class="clear">
+                
+                <label for="lastName">Last Name:</label> 
+                <input id="lastName" name="lastName" type="text" placeholder="Enter your last name"/><br class="clear">
+                
+                <label for="Address">Address:</label> 
+                <input id="Address" name="Address" type="text" placeholder="Enter your address"/><br class="clear">
+                
+                <label for="City">City:</label> 
+                <input id="City" name="City" type="text" placeholder="Enter your city"/><br class="clear">    
+                
+                <label for="State">State:</label>
+                
+                <Select id="State" name="State">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Verginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+
+                </select><br class="clear">
+
+                <label for="zipCode">Zip Code:</label> 
+                <input id="zipCode" name="zipCode" type="text" placeholder="Enter your zip code"/><br class="clear">
+                
+                <label for="phoneNumber">Phone Number:</label> 
+                <input id="phoneNumber" name="phoneNumber" type="text" placeholder="999-999-9999"/><br class="clear">
+
+                <label for="email">Email:</label>
+                <input id= "email" type="text" name="email" placeholder="Enter your email"><br class="clear">
+
+            </fieldset> 
+            <fieldset>
+                <legend>Backround Color</legend>
+                <label for="bgBlack">Black:</label>
+                <input type="radio" id="bgBlack" name="bgColor" onclick="document.body.style.backgroundColor='black';"><br><br>
+                
+                <label for="bgRed">Red:</label>
+                <input type="radio" id="bgRed" name="bgCoror" onclick="document.body.style.backgroundColor= '#f00'"><br/>
+            </fieldset>
+
+            <label for="submit">Submit: </label>
+            <input type="submit" id="submit" value="Ok Send My Data"><br>
+        
+        </form><br><br>
+        <a href="index.html">Home Page</a>
+    </Div>
+
+            <script>
+        var dateTime = new Date();
+        document.getElementById("time").innerText = dateTime;
+
+        function validateForm(){
+            if (!validFirstName()){
+                return false; // tell the browser not to submit the form 
+            }
+            else if (!validLastName()){
+                return false; // tell the browser not to submit the form
+            }
+            else if (!validZipCode()) {
+                return false; // tell the browser not to submit the form
+            } 
+            else if (!validPhone()){
+                return false;
+            }
+            else{
+                return true; // form fields are valid 
+            }
+        }
+
+        function validFirstName() {
+            // get the value entered for firstName and store it in a local variable
+            var fName = document.forms["emailForm"]["firstName"].value;
+             if (fName == ""){
+                // display a message in a pop-up window
+                alert("Please enter your First Name");
+                // place the user cursor back into the invalid field
+                document.getElementById("firstName").focus();
+                return false;
+           }
+                return true;
+        }
+        function validLastName() {
+            // get the value entered for firstName and store it in a local variable
+            var lName = document.forms["emailForm"]["lastName"].value;
+            
+            if (lName == "") {
+                // display a message in a pop-up window
+                alert("Please enter your Last Name");
+                // place the user cursor back into the invalid field
+                document.getElementById("lastName").focus();
+                return false;
+            } 
+                return true;
+        }
+
+        function validZipCode() {
+            // get the value entered for zipCode and store it in a local variable
+            var zipCode = document.forms["emailForm"]["zipCode"].value;
+
+            if(zipCode == ""){
+                alert("You must enter a Zip Code");
+                return false;
+            }
+            else if (/^[0-9]{5}(?:-[0-9]{4})?$/.test(zipCode)) {                
+                return true;
+            } 
+                // display a message in a pop-up window
+                alert("Please enter a valid Zip Code (5 or 9 digits)");
+                //focus on Zip Code
+                document.getElementById("zipCode").focus();
+                return false; 
+       }
+
+       function validPhone() {
+            // get the value entered for zipCode and store it in a local variable
+            var phone = document.forms["emailForm"]["phoneNumber"].value;
+
+            if(phone == ""){
+                alert("You must enter a phone number");
+                return false;
+            }
+            else if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone)) {                
+                return true;
+            } 
+                // display a message in a pop-up window
+                alert("Please enter a valid phone number 999-999-999");
+                //focus on Zip Code
+                document.getElementById("phoneNumber").focus();
+                return false; 
+       }
+
+        function validPhone() {
+            // get the value entered for zipCode and store it in a local variable
+            var email = document.forms["emailForm"]["email"].value;
+
+            if(email == ""){
+                alert("You must enter a email address");
+                return false;
+            }
+            else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {                
+                return true;
+            } 
+                // display a message in a pop-up window
+                alert("Please enter a valid email address");
+                //focus on Zip Code
+                document.getElementById("email").focus();
+                return false; 
+       }
+
+
+
+    </script>
+</body>
+</html>

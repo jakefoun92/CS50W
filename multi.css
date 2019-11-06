@@ -1,0 +1,19 @@
+p{
+	font-family: "Times-Roman", serif;
+	font-size: 20px;
+	color: yellow;
+}
+
+div.transbox {
+  background-color : #222222;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  float : left;
+  margin : 1% 1% 1% 4%;
+  padding : 1%;
+  width : 90%;
+}
+a{
+	color: yellow;
+}

@@ -1,0 +1,41 @@
+form {
+  margin: 0 auto;
+  padding: 2% 0;
+  width: 30%;
+}
+input, label {
+  float: left;
+  display: block;
+  margin: 1px 2px;
+  text-align: left;
+}
+label {
+  font-weight: bold;
+  text-align: left;
+  width: 20%
+}
+input {
+  width: 40%;
+}
+.clear {
+  clear: both;
+}
+fieldset {
+  background-color: #CCC;
+  border-radius: 20px;
+  color: navy;
+  margin: 2px;
+  width: 100%;
+}
+legend {
+  color: red;
+    font-weight: bold;
+    font-size: 30px;
+    width: 60%;
+}
+a:link{
+  color: #18b1ee;
+}
+a:visited{
+  color: pink;
+}
