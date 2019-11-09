@@ -20,6 +20,18 @@
   width : 90%;
 }
 
+.dragDiv {
+  background-color : #050505;
+  opacity: 0.8;
+  border : 1px ridge white;
+  border-radius : 22px;
+  clear : left;
+  float : left;
+  margin : 1% 4% 1% 1%;
+  padding : 1%;
+  width : 40%;
+  }
+
 .Div1 {
   background-color : #050505;
   opacity: 0.8;
