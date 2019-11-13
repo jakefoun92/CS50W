@@ -4,18 +4,13 @@ form {
   width: 30%;
 }
 input, label {
-  float: left;
-  display: block;
-  margin: 1px 2px;
+  display: inline-block;
   text-align: left;
+  margin: 1%;
+  width: 47%;
 }
 label {
   font-weight: bold;
-  text-align: left;
-  width: 20%
-}
-input {
-  width: 40%;
 }
 .clear {
   clear: both;
@@ -30,13 +25,17 @@ fieldset {
 legend {
   color: red;
     font-weight: bold;
-    font-size: 30px;
-    width: 60%;
-    padding: 3px;
+    font-size: 25px;
+    width: 100%;
+    float: left;
+    padding: 2px;
 }
 a:link{
   color: #18b1ee;
 }
 a:visited{
   color: pink;
+}
+select{
+  margin: 1%;
 }
