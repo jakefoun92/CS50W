@@ -32,6 +32,7 @@ legend {
     font-weight: bold;
     font-size: 30px;
     width: 60%;
+    padding: 3px;
 }
 a:link{
   color: #18b1ee;
